@@ -3,9 +3,54 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1AD52383-A1E8-4A99-8501-326871A941B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CBD5F720-97A5-4E48-B7AD-04FD036B7D85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.core", "1.core", "{913718B0-E5DF-4944-A946-339E13491648}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Infrastructures", "2.Infrastructures", "{1FF2517E-C0E8-430D-9E4E-08ADF98DA3B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Endpoints", "3.Endpoints", "{CD11A12F-3A56-4851-B997-224CFA3D62A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Core.Domain", "src\1.Core\OnlineStore.Core.Domain\OnlineStore.Core.Domain.csproj", "{2C11C06E-7A98-4964-8AD1-2AD075AB4657}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Core.ApplicationService", "src\1.Core\OnlineStore.Core.ApplicationService\OnlineStore.Core.ApplicationService.csproj", "{9358C468-AE2C-4C8C-9AB4-B7DC68366F05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E7D5DB36-36B3-4018-A236-AE65F5D3070F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Infrastructures.Data.SqlServer", "src\2.Infrastructures\Data\OnlineStore.Infrastructures.Data.SqlServer\OnlineStore.Infrastructures.Data.SqlServer.csproj", "{DC1F93DB-4467-4030-918B-7C32ED7AE66E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C11C06E-7A98-4964-8AD1-2AD075AB4657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C11C06E-7A98-4964-8AD1-2AD075AB4657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C11C06E-7A98-4964-8AD1-2AD075AB4657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C11C06E-7A98-4964-8AD1-2AD075AB4657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9358C468-AE2C-4C8C-9AB4-B7DC68366F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9358C468-AE2C-4C8C-9AB4-B7DC68366F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9358C468-AE2C-4C8C-9AB4-B7DC68366F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9358C468-AE2C-4C8C-9AB4-B7DC68366F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC1F93DB-4467-4030-918B-7C32ED7AE66E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC1F93DB-4467-4030-918B-7C32ED7AE66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC1F93DB-4467-4030-918B-7C32ED7AE66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC1F93DB-4467-4030-918B-7C32ED7AE66E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{913718B0-E5DF-4944-A946-339E13491648} = {1AD52383-A1E8-4A99-8501-326871A941B4}
+		{1FF2517E-C0E8-430D-9E4E-08ADF98DA3B4} = {1AD52383-A1E8-4A99-8501-326871A941B4}
+		{CD11A12F-3A56-4851-B997-224CFA3D62A2} = {1AD52383-A1E8-4A99-8501-326871A941B4}
+		{2C11C06E-7A98-4964-8AD1-2AD075AB4657} = {913718B0-E5DF-4944-A946-339E13491648}
+		{9358C468-AE2C-4C8C-9AB4-B7DC68366F05} = {913718B0-E5DF-4944-A946-339E13491648}
+		{E7D5DB36-36B3-4018-A236-AE65F5D3070F} = {1FF2517E-C0E8-430D-9E4E-08ADF98DA3B4}
+		{DC1F93DB-4467-4030-918B-7C32ED7AE66E} = {E7D5DB36-36B3-4018-A236-AE65F5D3070F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68833EF5-8E01-4681-9A1C-A4DD7454C4C2}
