@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E7D5DB36-3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Infrastructures.Data.SqlServer", "src\2.Infrastructures\Data\OnlineStore.Infrastructures.Data.SqlServer\OnlineStore.Infrastructures.Data.SqlServer.csproj", "{DC1F93DB-4467-4030-918B-7C32ED7AE66E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hadi", "hadi\hadi.csproj", "{F1713CA2-48B2-454F-AF97-E4736DED365A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DC1F93DB-4467-4030-918B-7C32ED7AE66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC1F93DB-4467-4030-918B-7C32ED7AE66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC1F93DB-4467-4030-918B-7C32ED7AE66E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1713CA2-48B2-454F-AF97-E4736DED365A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1713CA2-48B2-454F-AF97-E4736DED365A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1713CA2-48B2-454F-AF97-E4736DED365A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1713CA2-48B2-454F-AF97-E4736DED365A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{9358C468-AE2C-4C8C-9AB4-B7DC68366F05} = {913718B0-E5DF-4944-A946-339E13491648}
 		{E7D5DB36-36B3-4018-A236-AE65F5D3070F} = {1FF2517E-C0E8-430D-9E4E-08ADF98DA3B4}
 		{DC1F93DB-4467-4030-918B-7C32ED7AE66E} = {E7D5DB36-36B3-4018-A236-AE65F5D3070F}
+		{F1713CA2-48B2-454F-AF97-E4736DED365A} = {CBD5F720-97A5-4E48-B7AD-04FD036B7D85}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68833EF5-8E01-4681-9A1C-A4DD7454C4C2}
