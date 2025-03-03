@@ -13,5 +13,6 @@ namespace OnlineStore.Core.Domain.Product
         public decimal Price { get; set; }
 
         //...
+        //
     }
 }
