@@ -10,7 +10,6 @@
     <Folder Include="Customer\" />
     <Folder Include="Category\" />
     <Folder Include="OrderItem\" />
-    <Folder Include="Order\" />
   </ItemGroup>
 
 </Project>
