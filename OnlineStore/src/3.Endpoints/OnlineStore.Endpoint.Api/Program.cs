@@ -1,10 +1,15 @@
+﻿using Microsoft.EntityFrameworkCore;
+using OnlineStore.Infrastructures.Data.SqlServer.Common;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
 
-//builder.Services.AddDbContext
+//باید کانکشن استرینگ به دیبی کانتکست وصل کنیم
+builder.Services.AddDbContext<OnlineStoreCommandDbContext>(option =>
+    option.UseSqlServer(builder.Configuration.GetConnectionString("OnlineStoreCommandsConnectionString")));
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

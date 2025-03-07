@@ -1,4 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
+using OnlineStore.Core.Domain.Product;
+using OnlineStore.Infrastructures.Data.SqlServer.Product;
 
 namespace OnlineStore.Infrastructures.Data.SqlServer.Common
 {
@@ -6,7 +9,18 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Common
     {
         public OnlineStoreCommandDbContext(DbContextOptions<OnlineStoreCommandDbContext> options) : base(options)
         {
-            
+        }
+
+        public DbSet<Core.Domain.Product.Product> Products { get; set; }
+        //....
+
+        //اینو فعلا می نویسیم تا بعدا تکمیلش کنیم
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //اینجا باید فایل های کانفیگ رو دیبی کانتکست اطلاع بدیم تا بره اعمال کنه
+            modelBuilder.ApplyConfiguration(new ProductConfig());
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
