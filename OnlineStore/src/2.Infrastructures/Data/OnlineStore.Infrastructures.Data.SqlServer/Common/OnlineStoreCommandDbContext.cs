@@ -3,6 +3,7 @@ using Microsoft.Identity.Client;
 using OnlineStore.Core.Domain.Product;
 using OnlineStore.Infrastructures.Data.SqlServer.Customer;
 using OnlineStore.Infrastructures.Data.SqlServer.Order;
+using OnlineStore.Infrastructures.Data.SqlServer.OrderItem;
 using OnlineStore.Infrastructures.Data.SqlServer.Product;
 
 namespace OnlineStore.Infrastructures.Data.SqlServer.Common
@@ -31,6 +32,9 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Common
 
             modelBuilder .ApplyConfiguration(new OrderConfig());
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder .ApplyConfiguration(new OrderItemConfig());
+            base .OnModelCreating(modelBuilder);
         }
 
        
