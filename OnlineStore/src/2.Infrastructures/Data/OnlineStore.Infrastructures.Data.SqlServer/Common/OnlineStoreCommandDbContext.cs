@@ -2,6 +2,7 @@
 using Microsoft.Identity.Client;
 using OnlineStore.Core.Domain.Product;
 using OnlineStore.Infrastructures.Data.SqlServer.Customer;
+using OnlineStore.Infrastructures.Data.SqlServer.Order;
 using OnlineStore.Infrastructures.Data.SqlServer.Product;
 
 namespace OnlineStore.Infrastructures.Data.SqlServer.Common
@@ -14,6 +15,7 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Common
 
         public DbSet<Core.Domain.Product.Product> Products { get; set; }
         public DbSet<Core.Domain.Customer.Customer> Customers { get; set; }
+        public DbSet <Core.Domain.Order.Order> Orders { get; set; }
         //....
 
         //اینو فعلا می نویسیم تا بعدا تکمیلش کنیم
@@ -25,6 +27,9 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Common
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new CustomerConfig());
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder .ApplyConfiguration(new OrderConfig());
             base.OnModelCreating(modelBuilder);
         }
 
