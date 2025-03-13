@@ -12,9 +12,34 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Customer
     {
         public void Configure(EntityTypeBuilder<Core.Domain.Customer.Customer> builder)
         {
+            builder.HasKey(c => c.Id);
+           
+
             builder.Property(c => c.FirstName)
                 .IsRequired()
                 .HasMaxLength(50);
+
+
+            builder.Property(c => c.LastName)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            builder.Property(c => c.Email)
+                .IsRequired()
+                .HasMaxLength(80);
+
+            builder.Property(c => c.Password)
+                .IsRequired()
+                .HasMaxLength(10);
+
+            builder.Property(c => c.Address )
+                .IsRequired()
+                .HasMaxLength(50);
+
+            builder.Property(c => c.PhoneNumber )
+                .IsRequired()
+                .HasMaxLength(50);
+           
 
 
 
