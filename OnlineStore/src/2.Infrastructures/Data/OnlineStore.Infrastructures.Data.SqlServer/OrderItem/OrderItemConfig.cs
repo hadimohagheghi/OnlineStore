@@ -25,8 +25,13 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.OrderItem
                 .HasColumnType("decimal(18,3)");
 
 
+
+            //Computed column فیلد محاسباتی
+            builder.Property(oi => oi.TotalAmount)
+                .HasComputedColumnSql("[Quantity] * [UnitPrice]");
+
         }
 
-           
+
     }
 }

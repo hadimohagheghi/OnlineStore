@@ -15,6 +15,13 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Customer
             builder.HasKey(c => c.Id);
            
 
+
+            //Entity Properties  ویژگی های موجودیت
+            //شامل
+            //تنظیمات پیش فرض
+            //مقادیر محاسباتی
+            //و....
+
             builder.Property(c => c.FirstName)
                 .IsRequired()
                 .HasMaxLength(50);

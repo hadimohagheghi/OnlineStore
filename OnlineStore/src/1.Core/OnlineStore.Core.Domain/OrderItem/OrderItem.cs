@@ -9,7 +9,11 @@ namespace OnlineStore.Core.Domain.OrderItem
     public class OrderItem
     {
         public int Id { get; set; }
-        public int TotalAmount { get; set; }
+        /// <summary>
+        /// مبلغ کل
+        /// </summary>
+        public int TotalAmount { get; set; }//Computed column فیلد محاسباتی
+
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
     }

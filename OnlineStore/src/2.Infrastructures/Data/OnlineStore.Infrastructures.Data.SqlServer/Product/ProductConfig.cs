@@ -23,6 +23,10 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Product
                 .HasColumnType("decimal(18,2)");
 
 
+            //تنظیم روابط بین محصول و طبقه بندی محصول
+            builder.HasOne(p => p.Category)
+                .WithMany(c => c.Products)
+                .HasForeignKey(p => p.CategoryId);
 
         }
     }

@@ -17,6 +17,7 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Common
         public DbSet<Core.Domain.Product.Product> Products { get; set; }
         public DbSet<Core.Domain.Customer.Customer> Customers { get; set; }
         public DbSet <Core.Domain.Order.Order> Orders { get; set; }
+        public DbSet <Core.Domain.OrderItem.OrderItem> OrderItems { get; set; }
         //....
 
         //اینو فعلا می نویسیم تا بعدا تکمیلش کنیم
@@ -24,16 +25,11 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Common
         {
             //اینجا باید فایل های کانفیگ رو دیبی کانتکست اطلاع بدیم تا بره اعمال کنه
             modelBuilder.ApplyConfiguration(new ProductConfig());
-
-            base.OnModelCreating(modelBuilder);
-
             modelBuilder.ApplyConfiguration(new CustomerConfig());
-            base.OnModelCreating(modelBuilder);
-
             modelBuilder .ApplyConfiguration(new OrderConfig());
-            base.OnModelCreating(modelBuilder);
-
             modelBuilder .ApplyConfiguration(new OrderItemConfig());
+            
+            
             base .OnModelCreating(modelBuilder);
         }
 
