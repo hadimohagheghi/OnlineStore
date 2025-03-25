@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using OnlineStore.Core.Domain.Product;
+
 
 namespace OnlineStore.Infrastructures.Data.SqlServer.Product
 {
@@ -21,6 +23,16 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Product
             //میخوام که قیمت مثلا 118 رقم باشه و با دو رقم اعشار
             builder.Property(p => p.Price)
                 .HasColumnType("decimal(18,2)");
+
+            builder.Property(p => p.CreateDate)
+                .HasDefaultValueSql("GETUTCDATE()");
+            builder.Property (p => p.IsAvailable )
+                .HasDefaultValue (true);
+
+            //تنظیم روابط بین محصول و طبقه بندی محصول
+            builder.HasOne(p => p.Category)
+                .WithMany(c => c.Products)
+                .HasForeignKey(p => p.CategoryId);
 
 
 

@@ -24,6 +24,9 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.OrderItem
             builder.Property(oi => oi.UnitPrice)
                 .HasColumnType("decimal(18,3)");
 
+            builder.Property(oi => oi.TotalAmount)
+               .HasComputedColumnSql("[Quantity]*[UnitPrice]");
+
 
         }
 
