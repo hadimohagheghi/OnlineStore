@@ -28,14 +28,10 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Common
             //اینجا باید فایل های کانفیگ رو دیبی کانتکست اطلاع بدیم تا بره اعمال کنه
             modelBuilder.ApplyConfiguration(new ProductConfig());
 
-            base.OnModelCreating(modelBuilder);
-
             modelBuilder.ApplyConfiguration(new CustomerConfig());
-            base.OnModelCreating(modelBuilder);
-
+           
             modelBuilder .ApplyConfiguration(new OrderConfig());
-            base.OnModelCreating(modelBuilder);
-
+           
             modelBuilder .ApplyConfiguration(new OrderItemConfig());
 
             modelBuilder .ApplyConfiguration(new CategoryConfig());

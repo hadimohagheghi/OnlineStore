@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using OnlineStore.Core.Domain.Product;
+using OnlineStore.Core.Domain.Category;
+
 
 
 namespace OnlineStore.Infrastructures.Data.SqlServer.Product
@@ -25,13 +26,14 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Product
                 .HasColumnType("decimal(18,2)");
 
             builder.Property(p => p.CreateDate)
-                .HasDefaultValueSql("GETUTCDATE()");
+               .HasDefaultValueSql("GETUTCDATE()");
+
             builder.Property (p => p.IsAvailable )
                 .HasDefaultValue (true);
 
             //تنظیم روابط بین محصول و طبقه بندی محصول
             builder.HasOne(p => p.Category)
-                .WithMany(c => c.Products)
+                .WithMany(c => c.Product)
                 .HasForeignKey(p => p.CategoryId);
 
 

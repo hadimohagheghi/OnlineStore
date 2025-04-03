@@ -12,7 +12,20 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Order
             builder .HasKey (o => o.Id);
 
             builder.Property(o => o.CreateDate)
-                .HasColumnType("DateTime(3)");
+                .HasDefaultValueSql("GETUTCDATE()");
+
+
+
+            //تنظیم روابط بین سفارش و مشتری
+            builder.HasOne(o => o.Customer)
+                .WithMany(c => c.Orders)
+                .HasForeignKey(o => o.CustomerId);
+
+
+            // ایجاد ایندکس روی CustomerId برای بهبود عملکرد جستجوها
+            builder.HasIndex(o => o.CustomerId);
+
+
 
 
         }

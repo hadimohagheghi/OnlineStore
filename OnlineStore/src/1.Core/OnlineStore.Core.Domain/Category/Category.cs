@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
+﻿using System.Collections.Generic;
+using OnlineStore.Core.Domain.Product;
 
 namespace OnlineStore.Core.Domain.Category
 {
@@ -12,7 +7,9 @@ namespace OnlineStore.Core.Domain.Category
     {
         public int Id { get; set; }
         public string? Name { get; set; }
-        
+        //لیست محصولات موجود در این دسته‌بندی
+        public ICollection<Product> ?Products { get; set; }
+
 
 
     }

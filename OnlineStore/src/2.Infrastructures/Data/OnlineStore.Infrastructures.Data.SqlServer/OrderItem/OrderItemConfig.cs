@@ -28,6 +28,16 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.OrderItem
                .HasComputedColumnSql("[Quantity]*[UnitPrice]");
 
 
+            //تنظیم روابط بین آیتم سفارش و سفارش
+            
+
+            builder.HasOne(oi => oi.Order)
+               .WithMany(o => o.OrderItems)
+               .HasForeignKey(oi => oi.OrderId);
+
+
+
+
         }
 
            
