@@ -22,8 +22,7 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Order
                 .HasForeignKey(o => o.CustomerId);
 
 
-            // ایجاد ایندکس روی CustomerId برای بهبود عملکرد جستجوها
-            builder.HasIndex(o => o.CustomerId);
+            
 
 
 

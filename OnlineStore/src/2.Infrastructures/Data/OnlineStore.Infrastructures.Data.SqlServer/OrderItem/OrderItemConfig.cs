@@ -31,15 +31,21 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.OrderItem
             //تنظیم روابط بین آیتم سفارش و سفارش
             
 
-            builder.HasOne(oi => oi.Order)
-               .WithMany(o => o.OrderItems)
-               .HasForeignKey(oi => oi.OrderId);
+            builder.HasOne(oi => oi.Order)//مشخص میکنه که هر (آیتم سفارش) به یک (سفارش) تعلق داره
+               .WithMany(o => o.OrderItem)//مشخص میکنه که یک (سفارش) میتونه چندین (آیتم سفارش) داشته باشه
+               .HasForeignKey(oi => oi.OrderId);//کلید خارجی  (شناسه سفارش) رو در آیتم سفارش مشخص میکنه
+
+            //تنظیم روابط بین آیتم سفارش و محصول
+
+            builder.HasOne(oi => oi.Product)
+              .WithMany(p => p.OrderItem)
+              .HasForeignKey(oi => oi.ProductId);
 
 
 
 
         }
 
-           
+
     }
 }
