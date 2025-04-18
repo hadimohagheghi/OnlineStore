@@ -33,7 +33,7 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Product
 
             //تنظیم روابط بین محصول و طبقه بندی محصول
             builder.HasOne(p => p.Category)
-                .WithMany(c => c.Product)
+                .WithMany(c => c.Products)
                 .HasForeignKey(p => p.CategoryId);
 
 

@@ -17,7 +17,7 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.Order
 
 
             //تنظیم روابط بین سفارش و مشتری
-            builder.HasOne(o => o.Customer)
+            builder.HasOne(o => o.customer)
                 .WithMany(c => c.Orders)
                 .HasForeignKey(o => o.CustomerId);
 

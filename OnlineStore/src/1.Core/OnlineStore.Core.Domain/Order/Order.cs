@@ -17,7 +17,7 @@ namespace OnlineStore.Core.Domain.Order
         //و اینکه به ازای هر سفارش فقط یک مشتری داریم
         public Customer.Customer customer { get; set; }
 
-        public ICollection<OrderItem> OrderItems { get; set; }
+        public ICollection<OrderItem.OrderItem> OrderItems { get; set; }
 
         
 

@@ -30,7 +30,7 @@ namespace OnlineStore.Core.Domain.Product
         //و اینکه به ازای هر محصول فقط یک طبقه بندی محصول داریم
         public Category.Category Category { get; set; }
 
-            public ICollection<OrderItem> OrderItems { get; set; }
+            public ICollection<OrderItem.OrderItem> OrderItems { get; set; }
 
 
     }

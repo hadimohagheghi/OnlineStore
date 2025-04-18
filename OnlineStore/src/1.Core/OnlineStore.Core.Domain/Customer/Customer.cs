@@ -19,7 +19,7 @@ namespace OnlineStore.Core.Domain.Customer
         public string? PhoneNumber { get; set; }
 
         //لیست سفارشات موجود در این مشتری
-        public ICollection<Order> Orders  { get; set; }
+        public ICollection<Order.Order> Orders  { get; set; }
 
     }
 }
