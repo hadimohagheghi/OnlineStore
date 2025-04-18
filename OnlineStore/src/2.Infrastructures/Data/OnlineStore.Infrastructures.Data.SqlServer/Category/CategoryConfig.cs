@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace OnlineStore.Infrastructures.Data.SqlServer.Category
 {
-    public class CategoryConfig :IEntityTypeConfiguration<Core.Domain.Category.Category>
+    public class CategoryConfig : IEntityTypeConfiguration<Core.Domain.Category.Category>
     {
         public void Configure(EntityTypeBuilder<Core.Domain.Category.Category> builder)
         {

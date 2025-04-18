@@ -16,5 +16,12 @@ namespace OnlineStore.Core.Domain.OrderItem
 
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
+
+        public int OrderId { get; set; } //کلید خارجی
+        public int ProductId { get; set; } //کلید خارجی
+
+        public Order.Order Order { get; set; }
+        public Product.Product Product { get; set; }
     }
+
 }

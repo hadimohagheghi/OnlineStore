@@ -24,11 +24,25 @@ namespace OnlineStore.Infrastructures.Data.SqlServer.OrderItem
             builder.Property(oi => oi.UnitPrice)
                 .HasColumnType("decimal(18,3)");
 
-
-
-            //Computed column فیلد محاسباتی
             builder.Property(oi => oi.TotalAmount)
-                .HasComputedColumnSql("[Quantity] * [UnitPrice]");
+               .HasComputedColumnSql("[Quantity]*[UnitPrice]");
+
+
+            //تنظیم روابط بین آیتم سفارش و سفارش
+            
+
+            builder.HasOne(oi => oi.Order)//مشخص میکنه که هر (آیتم سفارش) به یک (سفارش) تعلق داره
+               .WithMany(o => o.OrderItem)//مشخص میکنه که یک (سفارش) میتونه چندین (آیتم سفارش) داشته باشه
+               .HasForeignKey(oi => oi.OrderId);//کلید خارجی  (شناسه سفارش) رو در آیتم سفارش مشخص میکنه
+
+            //تنظیم روابط بین آیتم سفارش و محصول
+
+            builder.HasOne(oi => oi.Product)
+              .WithMany(p => p.OrderItem)
+              .HasForeignKey(oi => oi.ProductId);
+
+
+
 
         }
 
